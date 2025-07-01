@@ -615,7 +615,7 @@ SURVIVE_EXPORT int survive_load_steamvr_lighthousedb_from_file(SurviveContext *c
 	if (ctx == 0)
 		return -1;
 
-	FILE *fp = fopen(filename, "r");
+	FILE *fp = fopen(filename, "rb");
 	if (fp) {
 		fseek(fp, 0L, SEEK_END);
 		int len = ftell(fp);
